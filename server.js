@@ -20,6 +20,8 @@ app.use(express.json());
 
 app.use(cors({origin:"*"}))
 
+app.get("/", (req,res) => res.status(200).send("hello"));
+
 app.post('/register',async (req, res) =>{
     try{
         const {username,email,password,confirmpassword} = req.body;
