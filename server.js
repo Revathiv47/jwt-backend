@@ -5,7 +5,7 @@ const jwt = require('jsonwebtoken');
 const middleware = require('./middleware');
 const cors = require('cors');
 const app = express();
-const PORT = process.env.PORT | 5000;
+const port = process.env.PORT || 5000;
 const url="mongodb+srv://admin:Riya4798@jwt.osp3y.mongodb.net/jwt?retryWrites=true&w=majority"
 
 mongoose.connect("mongodb+srv://admin:Riya4798@jwt.osp3y.mongodb.net/jwt?retryWrites=true&w=majority",{
@@ -89,6 +89,4 @@ app.get('/myprofile',middleware,async(req, res)=>{
     }
 })
 
-app.listen(PORT, () => {
-	console.log(`Server started on port ${PORT}`)
-})
+app.listen(port, () => console.log(`Listen on ${port}`))
