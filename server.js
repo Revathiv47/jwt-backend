@@ -5,7 +5,7 @@ const jwt = require('jsonwebtoken');
 const middleware = require('./middleware');
 const cors = require('cors');
 const app = express();
-const PORT = process.env.PORT | 5000
+const PORT = process.env.PORT | 5000;
 const url="mongodb+srv://admin:Riya4798@jwt.osp3y.mongodb.net/jwt?retryWrites=true&w=majority"
 
 mongoose.connect("mongodb+srv://admin:Riya4798@jwt.osp3y.mongodb.net/jwt?retryWrites=true&w=majority",{
